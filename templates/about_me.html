@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
     <nav class="topnav">
-        <a href="index.html" >FFT Algorithm</a>
-        <a href="about_me.html" class="active">About Me</a>
+        <a href="{{url_for('index')}}" >FFT Algorithm</a>
+        <a href="{{url_for('about_me')}}" class="active">About Me</a>
     </nav>
     <header>
         <div id="logo">
-            <img src="pi.png" alt="Pi_logo" id="circular-image">
+            <img src="../static/images/pi.png" alt="Pi_logo" id="circular-image">
         </div>
     </header>
     <main>
