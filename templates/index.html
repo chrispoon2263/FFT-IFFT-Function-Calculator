@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page: UI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav class="topnav">
+        <a href="index.html" class="active">FFT Algorithm</a>
+        <a href="about_me.html">About Me</a>
+    </nav>
+    <header>
+        <div id="logo">
+            <img src="pi.png" alt="Pi_logo" id="circular-image">
+        </div>
+        <div id="intro_text">
+            Multiply these functions together and visualize the FFT/IFFT Algorithm
+        </div>
+        <div id="sticky_info">
+            Instructions: Start by inputting two polynomial functions in the \(f(x)\) field and \(g(x)\) field below and hit calculate! <br><br> Note it is important to only put polynomial functions (e.g. \(2x + 4x^2\)). <br><br>Avoid inputs like \(sin(x)\), \(ln(x)\), or \(x^{-2}\).
+        </div>                                                                                                                                                                                 
+        <div id="input-container1">
+            <label id="function_f_input" for="firstNo">Enter \(f(x)\):</label>
+            <input type="text" id="f_input_value" placeholder="ex: 1 + x + 2x + 3x^2" value="x^2">
+        </div>
+        <div id="input-container2">
+            <label id ="function_g_ipnut" for="secondNo">Enter \(g(x)\):</label>
+            <input type="text" id="g_input_value" placeholder="ex: 2 + 3x + 4x^2" value="x^3">
+        </div>
+        <button class="button" id="calculate_button">Calculate</button>
+    </header>
+    <main>
+        <div id="hide_elements_container">
+            <div id="poly_top_left">Poylnomial Representations of \(f(x)\) and \(g(x)\)</div>
+            <div id="function1">\(f(x) = x^2 \)</div>
+            <div id="function2">\(g(x) = x^3 \)</div>
+            <div ><img class="down_arrow" id="down_arrow_left_top" src="down_arrow.png" alt="down_arrow"></div>
+            <div id="fft_text">Fast Fourier Transform Algorithm</div>
+            <div ><img class="down_arrow" id="down_arrow_left_bottom"src="down_arrow.png" alt="down_arrow"></div>
+            <div id="point_bottom_left">Point Representations of Functions</div>
+            <div id="point_fun_1">\(f(x) = [(-2, 1), (-1, 0), (1, 1), (2, 2)]\)</div>
+            <div id="point_fun_2">\(g(x) = [(-3, 1), (2, 1), (3, 2)]\)</div>
+            <div ><img class="default_graph" id="function_f" src="default_graph.png" alt="default_graph_f"></div>
+            <div ><img class="default_graph" id="function_g" src="default_graph.png" alt="default_graph_g"></div>
+            <div ><img class="right_arrow" id="right_arrow_left" src="right_arrow.png" alt="right_arrow"></div>
+            <div id="mutiply_points">Multiply Points Pairwise</div>
+            <div ><img class="right_arrow" id="right_arrow_right" src="right_arrow.png" alt="right_arrow"></div>
+            <div id="point_bottom_right">Point Representations of Function</div>
+            <div id="point_fun_3">\(h(x) = f(x) * g(x) = [(-3, 1), (2, 1), (3, 2), (2, 1), (5, 2)]\)</div>
+            <div ><img class="default_graph" id="function_h" src="default_graph.png" alt="default_graph_h"></div>
+            <div ><img class="up_arrow" id="up_arrow_bottom" src="up_arrow.png" alt="down_arrow"></div>
+            <div id="ifft_text">Inverse Fast Fourier Transform Algorithm</div>
+            <div><img class="up_arrow" id="up_arrow_top" src="up_arrow.png" alt="down_arrow"></div>
+            <div id="function3">\(h(x) = x^5 \)</div>
+            <div id="poly_top_right">Poylnomial Representation of \(h(x)\)</div>
+            <div><img class="double_arrow" id="double_arrow_left" src="double_arrow.png" alt="double_arrow"></div>
+            <div><img class="double_arrow" id="double_arrow_right" src="double_arrow.png" alt="double_arrow"></div>
+            <div><img class="default_graph" id="function_unity" src="default_graph.png" alt="default_graph_unity"></div>
+            <div id="roots_unity_text">Roots of Unity</div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+  
+</body>
+</html>
+
