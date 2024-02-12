@@ -12,22 +12,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import math
-#from Debugging.recursion_indent_decorator import recursion_indent
 
-# def roots_of_unity(n):
-#     # Precondition: n must be greater than 1 and a power of 2
-#     # ex: 2, 4, 8, 16, 32 ... 2^n
-#     w = [0] * n
-#
-#     # only need to calculate half of the roots of unity since the other half are negative values (look at unit circle)
-#     for i in range(n//2):
-#         if i == 0:
-#             w[i] = 1
-#             w[i + n//2] = -1
-#         else:
-#             w[i] = math.e ** ((2 * math.pi * 1j * i) / n)
-#             w[i + n//2] = -1 * w[i]
-#     return w
 
 
 def roots_of_unity(j, n):
@@ -127,21 +112,20 @@ def multiply_polynomials(list_A, list_B, rounding):
 
     # Convert to the point representation of the polynomial O(nlogn)
     a1 = FFT(pad_A)
-    print(a1)
     b1 = FFT(pad_B)
-    print(b1)
+
 
     # Multiply the point representation  O(n)
     for i in range(len(a1)):
         pad_C[i] = a1[i] * b1[i]
-    print(pad_C)
+
     # Convert back to the polynomial representation O(nlogn)
     C = IFFT(pad_C)
 
     # copy over values from C to c1 by unpadding the array
     for i in range(len(c1)):
         c1[i] = round(C[i].real, rounding) + round(C[i].imag, rounding) * 1j
-    return c1
+    return a1, b1, pad_C, c1
 
 def main():
     # Test FFT and IFFT works
@@ -153,9 +137,10 @@ def main():
     # y = IFFT(x)
     # print(y)
 
-    #print(multiply_polynomials([1, 2, 1], [1, -2, 1], 10))
-    # print(multiply_polynomials([1, 2, 3], [2, 3, 4], 10))
-    print(multiply_polynomials([0, 0, 1], [0, 0, 0, 1], 10))
+    print(multiply_polynomials([1, 2, 1], [1, -2, 1], 10)[2])
+    #print(multiply_polynomials([1, 2, 3], [2, 3, 4], 10))
+
+    #print(multiply_polynomials([0, 0, 1], [0, 0, 0, 1], 10)[3])
 
 if __name__ == "__main__":
     main()

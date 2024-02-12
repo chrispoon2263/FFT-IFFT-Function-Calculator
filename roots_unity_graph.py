@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
+import matplotlib
 
 def get_x_y(points):
     x_output = []
@@ -15,6 +15,7 @@ def get_point_representation(x_output, y_output):
     return list(zip(x_output, y_output))
 
 def create_roots_unity_graph(file_name, points):
+    matplotlib.use('agg')
     # turn off plot
     plt.ioff()
 
@@ -50,8 +51,8 @@ def create_roots_unity_graph(file_name, points):
 
 def main():
     points = [(1+0j), (-0.7071067811865476-0.7071067811865475j), (6.123233995736766e-17+1j), (0.7071067811865475-0.7071067811865476j), (-1+0j), (0.7071067811865476+0.7071067811865475j), (-6.123233995736766e-17-1j), (-0.7071067811865475+0.7071067811865476j)]
-
-    create_roots_unity_graph("roots_unity_graph.png", points)
+    #print(get_x_y(points))
+    create_roots_unity_graph("static/images/roots_unity_graph.png", points)
 
 
 if __name__ == "__main__":

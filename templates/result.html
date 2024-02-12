@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page: UI</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav class="topnav">
+        <a href="{{url_for('index')}}" class="active">FFT Algorithm</a>
+        <a href="{{url_for('about_me')}}">About Me</a>
+    </nav>
+    <header>
+        <div id="logo">
+            <img src="../static/images/pi.png" alt="Pi_logo" id="circular-image">
+        </div>
+        <div id="intro_text">
+            Multiply these functions together and visualize the FFT/IFFT Algorithm
+        </div>
+        <div id="sticky_info">
+            Instructions: Start by inputting two polynomial functions in the \(f(x)\) field and \(g(x)\) field below and hit calculate! <br><br> Note it is important to only put polynomial functions (e.g. \(2x + 4x^2\)). <br><br>Avoid inputs like \(sin(x)\), \(ln(x)\), or \(x^{-2}\).
+        </div>
+        <div id="input-container1">
+            <p id="function_f_input">\(f(x) = {{f_input_value}}\)</p>
+        </div>
+        <div id="input-container2">
+            <p id ="function_g_ipnut">\(g(x) = {{g_input_value}}\)</p>
+        </div>
+        <button class="button" id="reset_button_1"><a id=reset_button href="{{url_for('index')}}">Reset</a></button>                                                                                                                                                                            
+    </header>
+    <main>
+        <div id="poly_top_left">Poylnomial Representations of \(f(x)\) and \(g(x)\)</div>
+        <div id="function1">\(f(x) = {{f_input_value}} \)</div>
+        <div id="function2">\(g(x) = {{g_input_value}} \)</div>
+
+        <div ><img class="down_arrow" id="down_arrow_left_top" src="../static/images/down_arrow.png" alt="down_arrow"></div>
+        <div id="fft_text">Fast Fourier Transform Algorithm</div>
+        <div ><img class="down_arrow" id="down_arrow_left_bottom"src="../static/images/down_arrow.png" alt="down_arrow"></div>
+
+        <div id="point_bottom_left">Point Representations of Functions</div>
+        <div id="point_fun_1">\(f(x) =\) {{f_point_rounded}}</div>
+        <div id="point_fun_2">\(g(x) =\) {{g_point_rounded}}</div>
+        
+        <div ><img class="default_graph" id="function_f" src="{{ url_for('static', filename='images/graph_1.png') }}" alt="default_graph_f"></div>
+        <div ><img class="default_graph" id="function_g" src="{{ url_for('static', filename='images/graph_2.png') }}" alt="default_graph_g"></div>
+
+
+        <div ><img class="right_arrow" id="right_arrow_left" src="../static/images/right_arrow.png" alt="right_arrow"></div>
+        <div id="mutiply_points">Multiply Points Pairwise</div>
+        <div ><img class="right_arrow" id="right_arrow_right" src="../static/images/right_arrow.png" alt="right_arrow"></div>
+
+        <div id="point_bottom_right">Point Representations of Function</div>
+        <div id="point_fun_3">\(h(x) = f(x) * g(x) =\) {{h_point_rounded}}</div>
+        <div ><img class="default_graph" id="function_h" src="{{ url_for('static', filename='images/graph_3.png') }}" alt="default_graph_h"></div>
+
+        <div ><img class="up_arrow" id="up_arrow_bottom" src="../static/images/up_arrow.png" alt="up_arrow"></div>
+        <div id="ifft_text">Inverse Fast Fourier Transform Algorithm</div>
+        <div><img class="up_arrow" id="up_arrow_top" src="../static/images/up_arrow.png" alt="up_arrow"></div>
+
+        <div id="function3">\(h(x) = {{h_output}} \)</div>
+        <div id="poly_top_right">Poylnomial Representation of \(h(x)\)</div>
+
+        <div><img class="double_arrow" id="double_arrow_left" src="../static/images/double_arrow.png" alt="double_arrow"></div>
+        <div><img class="double_arrow" id="double_arrow_right" src="../static/images/double_arrow.png" alt="double_arrow"></div>
+        <div><img class="default_graph" id="function_unity" src="{{ url_for('static', filename='images/roots_unity_graph.png') }}" alt="default_graph_unity"></div>
+        <div id="roots_unity_text">Roots of Unity</div>
+    </main>
+    <footer>
+    </footer>
+    <script src="../static/js/script.js"></script>
+  
+</body>
+</html>
+

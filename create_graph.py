@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib
 
 
 # Returns a polynomial for x values for the coefs provided.
@@ -12,6 +13,7 @@ def poly_coefficients(x, coeffs):
 
 
 def save_graph(file_name, coeffs):
+    matplotlib.use('agg')
     # turn off plot
     plt.ioff()
 
@@ -32,7 +34,7 @@ def save_graph(file_name, coeffs):
 
 
 def main():
-    save_graph("graph_1.png", [1, 0, 2, 3])
+    save_graph("static/images/graph_1.png", [1, 0, 2, 3])
 
 
 if __name__ == "__main__":

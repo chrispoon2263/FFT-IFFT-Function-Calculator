@@ -116,6 +116,10 @@ label {
 
 }
 
+p{
+    color: #000;
+}
+
 input {
     padding: 5px;
     margin-right: 10px;
@@ -200,6 +204,19 @@ input[type=text], textarea {
     box-shadow: none;
     opacity: .65;
     pointer-events: none;
+}
+
+#reset_button{
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+#reset_button_1{
+    background-color: #f1433a;
 }
 
 #sticky_info{
@@ -348,6 +365,7 @@ main{
     background-color: white;
     color: black;
     width: 200px;
+    height: 25px;
     font-size: 8px;
     text-align: center;
     position: absolute;
@@ -360,6 +378,7 @@ main{
     background-color: white;
     color: black;
     width: 200px;
+    height: 25px;
     font-size: 8px;
     text-align: center;
     position: absolute;
@@ -538,9 +557,4 @@ main{
     left: 750px;
     top: 1250px;
     font-weight: 600;
-}
-
-#hide_elements_container{
-    display: none;
-    visibility: hidden;
 }
