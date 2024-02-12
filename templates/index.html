@@ -36,7 +36,18 @@
         </form>                                                                                                                                                                                 
     </header>
     <main>
-    </main>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <script>
+            console.log("ALERT")
+            function showAlert() {
+                alert("Not a poylnomial function. Please enter something like x + 2x + 3x^2. Avoid ln, sin, cos, tan, log, or e^() type syntax");
+            }
+        </script>
+        <body onload=showAlert()></body>
+    {% endif %}
+    {% endwith %}   
+</main>
     <footer>
     </footer>
 </body>
