@@ -1,19 +1,15 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, make_response
+import urllib.parse
 from FFT import multiply_polynomials
 from create_graph import save_graph
 from roots_unity_graph import create_roots_unity_graph, get_x_y, get_point_representation
 from string_to_list import convert_to_list
 from list_to_string import convert_to_string
+from convert_input_url import get_input_from_url
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
-            # <script>
-            #     function showAlert() {
-            #         alert("Not a poylnomial function. Please enter something like x + 2x + 3x^2. Avoid ln, sin, cos, tan, log, or e^() type syntax");
-            #     }
-            # </script>
-            # <div onload="showAlert()"></div>
 
 
 @app.route('/',  methods=["POST", "GET"])
@@ -82,5 +78,28 @@ def about_me():
     return render_template('/about_me.html')
 
 
+
+# http://127.0.0.1:5000/api/v1.0.0/calculate/input_1=x^2%2B2*x^5&input_2=x^5
+@app.route('/api/v1.0.0/calculate/<input1>&<input2>')
+def calculate(input1, input2):
+    try:
+        # Grab inputs from user URL
+        f_input_value = get_input_from_url(input1)
+        g_input_value = get_input_from_url(input2)
+
+        # Convert URL input1 and inpu2 to list inputs into f_list and g_list for FFT algorithm
+        f_list = convert_to_list(f_input_value)
+        g_list = convert_to_list(g_input_value)
+
+        # Run FFT algorithm
+        f_point, g_point, h_point, h_list = multiply_polynomials(f_list, g_list, 10)
+
+        # Convert h(x) back to poylnomial reprsentation
+        h_output = convert_to_string(h_list)
+
+        return make_response({'result': h_output}, 200)
+    except:
+        return make_response({'result': "Bad query"}, 400)
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=62745)
