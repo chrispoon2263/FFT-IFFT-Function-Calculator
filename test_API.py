@@ -31,22 +31,29 @@ def make_input(input_string, input_string_num):
 
 
 def main():
-    host = "http://flip1.engr.oregonstate.edu"
-    #host = "http://localhost"
-    path = "/api/v1.0.0/calculate/"
+    #host = "http://flip1.engr.oregonstate.edu"
+    host = "http://localhost"
+    path = "/api/v1.0.0/calculate?"
     port = 63861
     input_1 = "x^2 + 2"
     input_2 = "x^5"
     url = make_url_string(host, path, port, input_1, input_2)
     
+    # Send Request
+    print("")
+    print("**************************************")
+    print("Test Microservice starting...")
     print("Sending inputs to server:")
-    print("Input 1: " + input_1)
-    print("Input 2: " + input_2)
+    print("    Input 1: " + input_1)
+    print("    Input 2: " + input_2)
+    print("")
     response = requests.get(url)
 
-    
-    print("Server has responded back with: " + str(response.json()))
-    print(response.json())
+    # Get Response
+    print("Server has responded back with: ")
+    print("    Response: " + str(response.json()))
+    print("**************************************")
+    print("")
 
 
 if __name__ == "__main__":
