@@ -83,10 +83,14 @@ def about_me():
 @app.route('/api/v1.0.0/calculate/<input1>&<input2>')
 def calculate(input1, input2):
     try:
+        print("Server Listening...")
         # Grab inputs from user URL
         f_input_value = get_input_from_url(input1)
         g_input_value = get_input_from_url(input2)
+        print("Input 1: " + f_input_value)
+        print("Input 2: " + g_input_value)
 
+        print("Calculate Microservice calculating...")
         # Convert URL input1 and inpu2 to list inputs into f_list and g_list for FFT algorithm
         f_list = convert_to_list(f_input_value)
         g_list = convert_to_list(g_input_value)
@@ -96,9 +100,10 @@ def calculate(input1, input2):
 
         # Convert h(x) back to poylnomial reprsentation
         h_output = convert_to_string(h_list)
-
+        print("Output: " + h_output)
         return make_response({'result': h_output}, 200)
     except:
+        print("BAD INPUTS")
         return make_response({'result': "Bad query"}, 400)
 
 if __name__ == "__main__":

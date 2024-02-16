@@ -23,6 +23,7 @@ def make_url_string(host, path, port, input_1, input_2):
     input_1_str = make_input(input_1, 1)
     input_2_str = make_input(input_2, 2)
     output = host + ":" + str(port) + path + input_1_str + "&" + input_2_str
+    output = host + ":" + str(port) + path + input_1_str + "&" + input_2_str
     return output
 
 def make_input(input_string, input_string_num):
@@ -31,13 +32,20 @@ def make_input(input_string, input_string_num):
 
 def main():
     host = "http://flip1.engr.oregonstate.edu"
+    #host = "http://localhost"
     path = "/api/v1.0.0/calculate/"
     port = 63861
-    input_1 = "x^2 + 2x"
+    input_1 = "x^2 + 2"
     input_2 = "x^5"
     url = make_url_string(host, path, port, input_1, input_2)
-
+    
+    print("Sending inputs to server:")
+    print("Input 1: " + input_1)
+    print("Input 2: " + input_2)
     response = requests.get(url)
+
+    
+    print("Server has responded back with: " + str(response.json()))
     print(response.json())
 
 
