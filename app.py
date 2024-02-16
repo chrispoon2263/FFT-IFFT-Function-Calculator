@@ -102,4 +102,4 @@ def calculate(input1, input2):
         return make_response({'result': "Bad query"}, 400)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=62745)
+    app.run(debug=True, port=63861)
