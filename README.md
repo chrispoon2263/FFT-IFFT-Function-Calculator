@@ -48,24 +48,24 @@
 
         - Curl example 1:
             - HTTP GET Request info:
-            - Host: http://flip1.engr.oregonstate.edu
-            - Port: 63861
-            - Path: /api/v1.0.0/calculate/
+            - Host: "http://flip1.engr.oregonstate.edu"
+            - Port: "63861"
+            - Path: "/api/v1.0.0/calculate/"
             - Params: {
-                - input_1: x^3
-                - input_2: x^5      
+                - input_1: "x^3"
+                - input_2: "x^5"
             - }
             - curl --location 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate/input_1=x^3&input_2=x^5'
             - url = 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate/input_1=x^3&input_2=x^5'
             - send_request(url)
         - Curl example 2:
             - HTTP GET Request info:
-            - Host: http://flip1.engr.oregonstate.edu
-            - Port: 63861
-            - Path: /api/v1.0.0/calculate/
+            - Host: "http://flip1.engr.oregonstate.edu"
+            - Port: "63861"
+            - Path: "/api/v1.0.0/calculate/"
             - Params: {
-                - input_1: x^2+2 - x^3
-                - input_2: x%5E5      
+                - input_1: "x^2+2 - x^3"
+                - input_2: "x%5E5"      
             - } 
             - curl --location 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate/input_1=x^2+2 - x^3&input_2=x%5E5'
             - url = 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate/input_1=x^2+2 - x^3&input_2=x%5E5'
