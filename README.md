@@ -44,12 +44,29 @@
             - NOTE: Only use functions of the variable "x" for both or else you will get a 400 status bad request.
             - NOTE: Only use polynomial functions or you will get a 400 status bad request
         - In addition, you can put x^2 or you can build the query using URL encodings.
-            - (https://www.tutorialspoint.com/html/html_url_encoding.htm)        
-        - Curl example 1: 
+            - (https://www.tutorialspoint.com/html/html_url_encoding.htm)
+
+        - Curl example 1:
+            - HTTP GET Request info:
+            - Host: http://flip1.engr.oregonstate.edu
+            - Port: 63861
+            - Path: /api/v1.0.0/calculate/
+            - Params: {
+                - input_1: x^3
+                - input_2: x^5      
+            - }
             - curl --location 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate/input_1=x^3&input_2=x^5'
             - url = 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate/input_1=x^3&input_2=x^5'
             - send_request(url)
         - Curl example 2:
+            - HTTP GET Request info:
+            - Host: http://flip1.engr.oregonstate.edu
+            - Port: 63861
+            - Path: /api/v1.0.0/calculate/
+            - Params: {
+                - input_1: x^2+2 - x^3
+                - input_2: x%5E5      
+            - } 
             - curl --location 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate/input_1=x^2+2 - x^3&input_2=x%5E5'
             - url = 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate/input_1=x^2+2 - x^3&input_2=x%5E5'
             - send_request(url)
