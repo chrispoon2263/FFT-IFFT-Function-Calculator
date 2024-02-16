@@ -31,9 +31,15 @@
     - A) Sending HTTP GET Request:
          - The API endpoint will allow for two parameters. input_1 and input_2.
             - NOTE: Only use functions of the variable "x" for both or else you will get a 400 status bad request.
-            - NOTE: Only use polynomial functions or you will get a 400 status bad request
-            - In addition, you can put "x^2" or you can build the query using URL encodings so "x^2" would be equivalent to "x%5E2".
-                - (https://www.tutorialspoint.com/html/html_url_encoding.htm)
+            - NOTE: Only use polynomial functions or you will get a 400 status bad request.
+            - NOTE: You can use "x^2" for poylnomials  or URL encodings "x%5E2".
+            - NOTE: For polynomials like "x^2+3+2x^2" which is the equivalent of "x%5E2%2B3%2B2x%5E2" YOU MUST USE URL ENCODINGS FORM for longer inputs.
+                 - "^"     = %5E
+                 - " " = %20
+                 - "+"     = %2B
+                 - "-"      = %2D
+                 - "*"     = %2A
+                 (https://www.tutorialspoint.com/html/html_url_encoding.htm)
                   
         -  Example 1:
             - curl --location 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate?input_1=x^3&input_2=x^5'
