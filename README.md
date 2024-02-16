@@ -30,7 +30,8 @@
 
 - Directions for sending requests and receiving response from calculate microservice
     - The API endpoint is designed to take in two input parameters input_1 and input_2 in the form of a poylnomial functions. The server will use the FFT/IFFT algorithm to multiply the functions and returns back a single poylnomial function in json format.
- 
+     - NOTE MAKE SURE YOU ARE LOGGED ONTO OSU VPN
+       
     - A) Sending HTTP GET Request:
          - The API endpoint will allow for two parameters. input_1 and input_2.
             - NOTE: Only use functions of the variable "x" for both or else you will get a 400 status bad request.
