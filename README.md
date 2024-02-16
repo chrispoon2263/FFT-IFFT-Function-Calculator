@@ -32,7 +32,7 @@
          - The API endpoint will allow for two parameters. input_1 and input_2.
             - NOTE: Only use functions of the variable "x" for both or else you will get a 400 status bad request.
             - NOTE: Only use polynomial functions or you will get a 400 status bad request
-            - In addition, you can put "x^2" or you can build the query using URL encodings so "x^2" would equivelnt to "x%5E2".
+            - In addition, you can put "x^2" or you can build the query using URL encodings so "x^2" would be equivalent to "x%5E2".
                 - (https://www.tutorialspoint.com/html/html_url_encoding.htm)
                   
         -  Example 1:
@@ -75,3 +75,4 @@
             - https://documenter.getpostman.com/view/23973343/2sA2r6YQG7
         - UML sequence diagram via Lucidchart 
             - https://lucid.app/lucidchart/4f7f271f-dfd9-4e4d-8098-d71a9c222b90/edit?viewport_loc=-73%2C1219%2C3602%2C1786%2C0_0&invitationId=inv_58bf306c-930f-43db-af31-113b6fc7357f
+
