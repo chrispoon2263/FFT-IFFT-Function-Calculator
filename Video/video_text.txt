@@ -1,0 +1,47 @@
+
+
+Heuristic 1 (Explain the benefits of using new and existing features):
+    On the home page UI, there are familiar input fields and buttons. 
+    In addition, on the side in a yellow box are instructions on what to do. 
+    User needs to input function 1 and function 2 then hit calculate. 
+
+
+Heuristic 2 (Explain the costs of using new and existing features): 
+    On the home page UI, the cost to explain existing features is the real estate taken by the yellow sticky of information. 
+
+
+Heuristic 3 (Let people gather as much information as they want, and no more than they want): 
+    On the home page UI, users that are more hands off can explore the UI without instructions and see what happens when a button is clicked. 
+    In addition, for users that require more instruction, the yellow sticky will help them understand what they need to do to progress to see the visualization of the algorithm.
+
+
+Heuristic 4 (Keep familiar features available): 
+    On the home page UI, a navigation bar is at the top that highlights to show what page the user is on. 
+    In addition, buttons and input fields are kept standard so the user knows how to use them. 
+    There is also highlight field for an input field.
+    There is also an example input for when a user deletes the default function.
+
+
+Heuristic 5 (Make undo/redo and backtracking available): 
+    On the home page UI, once a user hits calculate, it will turn the two input fields to the user's valid input and the button will change to a reset button
+    Hitting reset will just update the bottom UI and bring the user back to the home page over and over again. 
+
+
+Heuristic 6 (Provide an explicit path through the task): 
+    The yellow sticky will give guidance to users to enter 2 functions and hit calculate. 
+    The nav bar will tell the user where they are at on the web app/ user interface. 
+    In addition, preloaded default values will be used for the user if they just randomly click calculate and want to know what happens. 
+    After 1 or 2 uses, most users will understand the functionality of the app since there are only 2 fields and 1 button. 
+
+
+Heuristic 7 (Provide ways to try out different approaches): 
+    When a user enters a non-polynomial function, a warning will tell the user to correct the function and provide a default function for them. 
+    The input field will allow the user to try different polynomial functions. 
+
+Heuristic 8 (Encourage tinkerers to tinker mindfully): 
+    Since the warning will come up when a user inputs a non-polynomial function, 
+    the tinker will figure out to not use a polynomial function and avoid errors in trying to get a visual to pop up. 
+
+Quality Attribute: Understandability
+    It can be hard to understand the inner workings of the FFT/IFFT algorithm, 
+    so breaking apart how the FFT/IFFT algorithm works with graphs will make it easier to see what is going on in the algorithm. 

@@ -1,21 +1,3 @@
-# import urllib.parse
-#
-# string_input_1 = "input_1=x^2%2B2*x^5"
-#
-# string_input_2 = "input_2=x^5"
-#
-# total_string = string_input_1 + "&" + string_input_2
-# x = urllib.parse.quote(string_input_1)
-# print(x)
-#
-# y = urllib.parse.parse_qs(total_string)
-# print(y)
-#
-# # "/input_1=x%5E2%2B2*x%5E5&input_2=x%5E5"
-#
-# # http://127.0.0.1:5000/api/v1.0.0/calculate/input_1=x^2%2B2*x^5&input_2=x^5
-
-
 import urllib.parse
 import requests
 
@@ -44,6 +26,7 @@ def main():
     print("**************************************")
     print("Test Microservice starting...")
     print("Sending inputs to server:")
+    print("URL: ", url)
     print("    Input 1: " + input_1)
     print("    Input 2: " + input_2)
     print("")

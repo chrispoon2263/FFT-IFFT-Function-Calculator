@@ -99,6 +99,7 @@ def pad_list(list_A, list_B):
 
     return pad_A, pad_B, pad_C, pad_D
 
+
 # Application of FFT/IFFT algorithm for polynomial multiplication
 def multiply_polynomials(list_A, list_B, rounding):
     # Example: Multiply (1 + 2x + x^2 )(1 - 2x + x^2) = 1 -2x^2 + x^4
@@ -127,19 +128,10 @@ def multiply_polynomials(list_A, list_B, rounding):
         c1[i] = round(C[i].real, rounding) + round(C[i].imag, rounding) * 1j
     return a1, b1, pad_C, c1
 
-def main():
-    # Test FFT and IFFT works
-    # P1 = [5, 3, 2, 1]
-    #
-    # x = (FFT(P1))
-    # print(x)
-    #
-    # y = IFFT(x)
-    # print(y)
 
+def main():
     print(multiply_polynomials([1, 2, 1], [1, -2, 1], 10)[2])
     #print(multiply_polynomials([1, 2, 3], [2, 3, 4], 10))
-
     #print(multiply_polynomials([0, 0, 1], [0, 0, 0, 1], 10)[3])
 
 if __name__ == "__main__":

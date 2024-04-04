@@ -6,7 +6,7 @@
     <title>Home Page: UI</title>
     <link rel="stylesheet" href="../static/css/styles.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>  
 </head>
 <body>
     <nav class="topnav">
@@ -26,15 +26,16 @@
         <form id='send_form' method="POST" action="">
             <div id="input-container1">
                 <label id="function_f_input" for="firstNo">Enter \(f(x)\):</label>
-                <input name="f_input_value" type="text" id="f_input_value" placeholder="ex: 1 + x + 2x + 3x^2" value="x^2" required>
+                <input name="f_input_value" type="text" id="f_input_value" placeholder="ex: 1 + x + 2x + 3x^2" value="x^2" required />
             </div>
             <div id="input-container2">
                 <label id ="function_g_ipnut" for="secondNo">Enter \(g(x)\):</label>
-                <input name="g_input_value" type="text" id="g_input_value" placeholder="ex: 2 + 3x + 4x^2" value="x^3" required>
+                <input name="g_input_value" type="text" id="g_input_value" placeholder="ex: 2 + 3x + 4x^2" value="x^3" required />
             </div>
-            <input class="button" id="calculate_button" type="submit" value="Calculate">
-        </form>                                                                                                                                                                                 
+            <input class="button" id="calculate_button" type="submit" value="Calculate"/>
+        </form>                                                                                                                                    
     </header>
+    <button class="button" id="randomize_button">Randomize</button>
     <main>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -46,10 +47,11 @@
         </script>
         <body onload=showAlert()></body>
     {% endif %}
-    {% endwith %}   
+    {% endwith %}
 </main>
     <footer>
     </footer>
 </body>
+<script defer src="../static/js/script.js"></script>
 </html>
 

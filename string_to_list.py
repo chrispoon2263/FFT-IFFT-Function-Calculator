@@ -4,6 +4,7 @@ from sympy import sympify, Poly, var
 import re
 
 
+# Converts String function to a list of numbers
 def convert_to_list(string_input):
     # lower case the whole string, remove front and back white spaces
     output = string_input.strip().lower()

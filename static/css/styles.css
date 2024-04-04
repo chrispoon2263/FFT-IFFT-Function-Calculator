@@ -232,6 +232,12 @@ input[type=text], textarea {
 
 }
 
+#randomize_button{
+    position: absolute;
+    left: 1450px;
+    top: 400px;
+}
+
 
 article{
     font-size: 16px;

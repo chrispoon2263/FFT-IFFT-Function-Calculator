@@ -12,6 +12,7 @@ def poly_coefficients(x, coeffs):
     return y
 
 
+# Saves the graph to files
 def save_graph(file_name, coeffs):
     matplotlib.use('agg')
     # turn off plot
