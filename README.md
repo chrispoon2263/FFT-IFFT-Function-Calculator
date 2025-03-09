@@ -5,16 +5,24 @@ $ python3 -m venv venv
 ```
 
 - Activate the venv
-    - $ source venv/bin/activate
+```python
+$ source venv/bin/activate
+```
 
 - Install dependencies
-    - $ pip3 install -r requirements.txt
+```python
+$ pip3 install -r requirements.txt
+```
 
 - Run Project
-    - $ make run
+```python
+$ make run
+```
 
 - Deactivate the venv when done
-    - $ deactivate
+```python
+$ deactivate
+```
 
 
 ---
