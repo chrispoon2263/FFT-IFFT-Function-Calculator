@@ -2,7 +2,7 @@
 
 This RESTful API performs function multiplication using the Fast Fourier Transform (FFT) and Inverse Fast Fourier Transform (IFFT). Users can send two input functions, and the API computes their product efficiently in the frequency domain using FFT, then transforms the result back using IFFT.
 
-Features:
+### Features:
 	- Accepts two input functions via API request
 	- Uses FFT for efficient function multiplication
 	- Returns the final result using IFFT
