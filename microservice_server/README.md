@@ -1,6 +1,6 @@
 # Randomizer Microservice
 
-- This microservice provides a simple UI that allows users to generate randomized inputs by clicking a button. The backend updates and logs the randomized values in real-time.
+- This microservice provides allows users to generate randomized inputs by clicking a button on the host UI. The backend updates and logs the randomized values in real-time.
 
 --- 
 
@@ -16,11 +16,14 @@ source venv/bin/activate
 # 3. Install dependencies
 pip3 install -r requirements.txt
 
-# 4. Start the microservice
+# 4. Start the microservice in a new terminal
 python3 microservice_server.py
 ```
 ---
 ### Usage
 - Open a web browser and go to http://localhost:63861/
-- Click the “Random” button on the UI
+- Click the “Random” button on the UI to randomly pick two new input functions
 - Observe the command line updating with new randomized values on every click
+
+---
+![alt text](images/randomizer.png)

@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, make_response, jsonify
-from FFT import multiply_polynomials
-from create_graph import save_graph
-from roots_unity_graph import create_roots_unity_graph, get_x_y, get_point_representation
-from string_to_list import convert_to_list
-from list_to_string import convert_to_string
+from src.fft.FFT import multiply_polynomials  # Update FFT import path
+from src.graph.create_graph import save_graph  # Update graph import path
+from src.graph.roots_unity_graph import create_roots_unity_graph, get_x_y, get_point_representation  # Update graph import path
+from src.utils.string_to_list import convert_to_list  # Update utils import path
+from src.utils.list_to_string import convert_to_string  # Update utils import path
 import requests
 
 # Flask Settings
