@@ -1,3 +1,14 @@
+# FFT/IFFT RESTful API
+
+This RESTful API performs function multiplication using the Fast Fourier Transform (FFT) and Inverse Fast Fourier Transform (IFFT). Users can send two input functions, and the API computes their product efficiently in the frequency domain using FFT, then transforms the result back using IFFT.
+
+Features:
+	- Accepts two input functions via API request
+	- Uses FFT for efficient function multiplication
+	- Returns the final result using IFFT
+	- Built for high-speed computation
+
+--- 
 ### Directions for clean install
 - Start the project by creating a virtual environment:
 ```python
@@ -76,12 +87,13 @@ $ deactivate
             - response = send_request(url)
             - response = response.json()
             - answer = response["result]
-
+---
+### Documentation
 
     - C) UML Sequence Diagram and API documentation
         - API Documentation Postman
             - https://documenter.getpostman.com/view/23973343/2sAYdoG8FL
         - UML sequence diagram via Lucidchart 
-            - https://lucid.app/lucidchart/4f7f271f-dfd9-4e4d-8098-d71a9c222b90/edit?viewport_loc=-73%2C1219%2C3602%2C1786%2C0_0&invitationId=inv_58bf306c-930f-43db-af31-113b6fc7357f
+            - https://lucid.app/lucidchart/4f7f271f-dfd9-4e4d-8098-d71a9c222b90/edit?invitationId=inv_58bf306c-930f-43db-af31-113b6fc7357f&page=0_0#
 
 
