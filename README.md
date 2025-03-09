@@ -1,31 +1,24 @@
-# CS_361_project
+### Directions for clean install
+- Start the project by creating a virtual environment:
+    - $ python3 -m venv venv
 
-- Directions for clean install
+- Activate the venv
+    - $ source venv/bin/activate
 
-    - Start the project by creating a virtual environment:
-        - $ python3 -m venv venv
+- Install dependencies
+    - $ pip3 install -r requirements.txt
 
-    - Activate the venv
-        - $ source venv/bin/activate
-        - (hint use an alias to activate)
+- Run Project
+    - $ make run
 
-    - Install dependencies
-        - $ pip3 install -r requirements.txt
-
-    - Run Project
-        - $ make run
-
-    - Deactivate the venv when done
-        - $ deactivate
+- Deactivate the venv when done
+    - $ deactivate
 
 
+---
 
-
-
-
-- Directions for sending requests and receiving response from calculate microservice
+### Directions for sending requests and receiving response from calculate microservice
     - The API endpoint is designed to take in two input parameters input_1 and input_2 in the form of a poylnomial functions. The server will use the FFT/IFFT algorithm to multiply the functions and returns back a single poylnomial function in json format.
-     - NOTE MAKE SURE YOU ARE LOGGED ONTO OSU VPN
        
     - A) Sending HTTP GET Request:
          - The API endpoint will allow for two parameters. input_1 and input_2.
@@ -41,20 +34,20 @@
                  (https://www.tutorialspoint.com/html/html_url_encoding.htm)
                   
         -  Example 1:
-            - curl --location 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate?input_1=x^3&input_2=x^5'
+            - curl --location 'http://localhost:63861/api/v1.0.0/calculate?input_1=x^3&input_2=x^5'
          
             - HTTP GET Request info:
-                - Host: "http://flip1.engr.oregonstate.edu"
+                - Host: "http://localhost:63861"
                 - Port: "63861"
                 - Path: "/api/v1.0.0/calculate?"
                 - Params: {
                     - input_1: "x^3"
                     - input_2: "x^5"}
-                - url = 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate?input_1=x^3&input_2=x^5'
+                - url = 'http://localhost:63861/api/v1.0.0/calculate?input_1=x^3&input_2=x^5'
                 - send_request(url)
                   
         - Example 2:
-            - curl --location 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate?input_1=x%5E2%2B2*x%5E5&input_2=x%5E5'
+            - curl --location 'http://localhost:63861/api/v1.0.0/calculate?input_1=x%5E2%2B2*x%5E5&input_2=x%5E5'
                    
             - HTTP GET Request info:
                 - Host: "http://flip1.engr.oregonstate.edu"
@@ -63,7 +56,7 @@
                 - Params: {
                     - input_1: "x%5E2%2B2*x%5E5"
                     - input_2: "x%5E5"} 
-                - url = 'http://flip1.engr.oregonstate.edu:63861/api/v1.0.0/calculate?input_1=x%5E2%2B2*x%5E5&input_2=x%5E5'
+                - url = 'http://localhost:63861/api/v1.0.0/calculate?input_1=x%5E2%2B2*x%5E5&input_2=x%5E5'
                 - send_request(url)
   
     - B) Receiving Reponse back:
@@ -76,8 +69,8 @@
 
 
     - C) UML Sequence Diagram and API documentation
-        - API Documentation
-            - https://documenter.getpostman.com/view/23973343/2sA2r6YQG7
+        - API Documentation Postman
+            - https://documenter.getpostman.com/view/23973343/2sAYdoG8FL
         - UML sequence diagram via Lucidchart 
             - https://lucid.app/lucidchart/4f7f271f-dfd9-4e4d-8098-d71a9c222b90/edit?viewport_loc=-73%2C1219%2C3602%2C1786%2C0_0&invitationId=inv_58bf306c-930f-43db-af31-113b6fc7357f
 
