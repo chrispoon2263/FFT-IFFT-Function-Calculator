@@ -22,7 +22,7 @@ python3 microservice_server.py
 ---
 ### Usage
 - Open a web browser and go to http://localhost:63861/
-- Click the “Random” button on the UI to randomly pick two new input functions
+- Click the “Random” button on the host UI to randomly pick two new input functions
 - Observe the command line updating with new randomized values on every click
 
 ---
