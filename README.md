@@ -14,26 +14,19 @@ This RESTful API performs function multiplication using the Fast Fourier Transfo
 ![alt text](images/output_2.png)
 
 ### Directions for clean install
-- Start the project by creating a virtual environment:
 ```python
+# Start the project by creating a virtual environment:
 $ python3 -m venv venv
-```
 
-- Activate the venv
-```python
+# Activate the venv
 $ source venv/bin/activate
-```
 
-- Install dependencies
-```python
+# Install dependencies
 $ pip3 install -r requirements.txt
-```
 
-- Run Project
-```python
+#  Run Project
 $ make run
 ```
-
 
 ---
 
