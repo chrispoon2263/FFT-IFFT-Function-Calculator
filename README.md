@@ -1,6 +1,8 @@
 ### Directions for clean install
 - Start the project by creating a virtual environment:
-    - $ python3 -m venv venv
+```python
+$ python3 -m venv venv
+```
 
 - Activate the venv
     - $ source venv/bin/activate
